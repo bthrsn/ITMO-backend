@@ -9,10 +9,10 @@
   <input type="text" id="inp">
   <button id="bt"></button>
   <script>
-  const bt = document.querySelector('#bt');
-  bt.addEventListener('click', async () => {
-    let result = await fetch(url);
-    return await result.text();
+  const button = document.querySelector('#bt'),
+        input = document.querySelector('#inp');
+  button.addEventListener('click', async () => {
+    return input.textContent = await fetch(url).text();
   });
   </script>
 </body>
