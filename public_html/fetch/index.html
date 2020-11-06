@@ -11,8 +11,13 @@
   <script>
   const button = document.querySelector('#bt'),
         input = document.querySelector('#inp');
-  button.addEventListener('click', async () => {
-    return input.textContent = await fetch(url).text();
+        
+  const postData = async (url) => {
+    let result = await fetch(url);
+    return await result.text();
+  }
+  button.addEventListener('click', () => {
+    postData(input.textContent).then(res => res = input.textContent)
   });
   </script>
 </body>
