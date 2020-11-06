@@ -10,10 +10,10 @@
   <button id="bt"></button>
   <script>
   const button = document.querySelector('#bt');
-  let input = document.querySelector('#inp').value;
         
-  const fetchData = async () => {
-    await fetch(input)
+  const fetchData = () => {
+    let input = document.querySelector('#inp').value;
+    fetch(input)
       .then(response => response.text())
       .catch(reject => console.log(reject))
       .finally(data => input = data);
