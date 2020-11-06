@@ -9,8 +9,8 @@
   <input type="text" id="inp">
   <button id="bt"></button>
   <script>
-  const button = document.querySelector('#bt'),
-        input = document.querySelector('#inp').value;
+  const button = document.querySelector('#bt');
+  let input = document.querySelector('#inp').value;
         
   const fetchData = async () => {
     await fetch(input)
