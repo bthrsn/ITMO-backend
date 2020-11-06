@@ -10,15 +10,21 @@
   <button id="bt"></button>
   <script>
   const button = document.querySelector('#bt'),
-        input = document.querySelector('#inp');
+        input = document.querySelector('#inp').value;
         
-  const postData = async (url) => {
-    let result = await fetch(url);
-    return await result.text();
+  const fetchData = async () => {
+    await fetch(input)
+      .then(response => {
+        return response.text();
+      })
+      .catch(reject => {
+        console.log(reject);
+      })
+      .finally(data => {
+      input = data;
+      });
   }
-  button.addEventListener('click', () => {
-    postData(input.textContent).then(res => res = input.textContent)
-  });
+  button.addEventListener('click', fetchData);
   </script>
 </body>
 </html>
