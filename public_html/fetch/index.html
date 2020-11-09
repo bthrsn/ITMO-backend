@@ -15,7 +15,7 @@
   button.addEventListener('click', () => {
   fetch(input.value)
     .then(res => {
-      return response.text();
+      return res.text();
     }) 
     .then(data => {
       input.value = data;
