@@ -12,9 +12,17 @@
   const button = document.querySelector('#bt'),
         input = document.querySelector('#inp');
         
-  button.addEventListener('click', async () => {
-    const changeInput = text => new Promise(res => text = fetch(text));
-    await changeInput(input.textContent);
+  button.addEventListener('click', () => {
+  fetch(input.value)
+    .then(res => {
+      return response.text();
+    }) 
+    .then(data => {
+      input.value = data;
+    })
+    .catch(rej => {
+      console.log('error:', e);
+    });
   });
   </script>
 </body>
