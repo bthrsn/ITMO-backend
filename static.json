@@ -3,7 +3,9 @@
   "headers": {
       "/**": {
           "Access-Control-Allow-Origin": "*",
-          "X-Author": "mikhailliakh"
+          "X-Author": "mikhailliakh",
+          "Access-Control-Allow-Methods": "GET,POST,PUT,DELETE,OPTIONS",
+          "Access-Control-Allow-Headers": "x-test,Content-Type,Accept,Access-Control-Allow-Headers"
       },
       "/fetch/": {
           "Access-Control-Allow-Origin": "*"
