@@ -9,14 +9,13 @@
   <input type="text" id="inp">
   <button id="bt"></button>
   <script>
-  const button = document.querySelector('#bt');
-  let input = document.querySelector('#inp').textContent;
+  const button = document.querySelector('#bt'),
+        input = document.querySelector('#inp');
         
-  const fetchData = async () => {
-    await fetch(input)
-      .then(response => response.text() = input)
-  }
-  button.addEventListener('click', fetchData);
+  button.addEventListener('click', async () => {
+    const changeInput = text => new Promise(res => text = fetch(text));
+    await changeInput(input.textContent);
+  });
   </script>
 </body>
 </html>
