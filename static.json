@@ -1,11 +1,24 @@
+
 {
   "headers": {
-    "/**": {
-      "Access-Control-Allow-Origin": "*",
-      "Content-Type": "text/plain; charset=UTF-8"
-    },
-    "/fetch/": {
-      "Content-Type": "text/html; charset=UTF-8"
-    }    
+      "*/": {
+          "Access-Control-Allow-Origin": "*",
+          "X-Author": "mikhailliakh"
+      },
+      "/fetch/": {
+          "Access-Control-Allow-Origin": "*"
+      },
+      "/login/": {
+          "Access-Control-Allow-Origin": "*",
+          "Content-Type": "text/plain; charset=UTF-8"
+      },
+      "/promise/": {
+          "Access-Control-Allow-Origin": "*",
+          "Content-Type":"text/plain; charset=UTF-8"
+      },
+      "/sample/": {
+          "Access-Control-Allow-Origin": "*",
+          "Content-Type": "text/plain; charset=UTF-8"
+      }
   }
 }
